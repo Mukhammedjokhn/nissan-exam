@@ -1,0 +1,930 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 11%;
+}
+/* 
+    HEADER
+ */
+.header {
+    width: 100%;
+    height: 700px;
+    background: url("https://www.nissanusa.com/content/dam/Nissan/us/homepage/secondary-pfa/nissan-ariya-ev.jpg")
+        no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 13%;
+}
+.header > h5 {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.header > h1 {
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: 100;
+}
+.header > p {
+    margin-bottom: 10px;
+    width: 30%;
+    line-height: 1.2;
+}
+.header > button {
+    width: 200px;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+.header > button i {
+    margin-left: 20px;
+}
+.header > button:hover {
+    opacity: 0.8;
+}
+/* 
+    NAVBAR
+ */
+.navbar {
+    position: fixed;
+    width: 78%;
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 12px;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+    background: #c6c6c646;
+}
+.navbar > img {
+    z-index: 10;
+}
+.nav__collection {
+    display: flex;
+    min-width: 58%;
+    height: 120px;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__item {
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 2;
+    user-select: none;
+}
+.nav__item > i {
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav__item > button {
+    padding: 12px 18px;
+    border: 1px solid #000;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+    letter-spacing: 0.05em;
+}
+.nav__item > button:hover {
+    border: 1px solid crimson;
+    background: crimson;
+    color: #fff;
+}
+
+.nav__item:nth-child(1),
+.nav__item:nth-child(2),
+.nav__item:nth-child(3),
+.nav__item:nth-child(4),
+.nav__item:nth-child(5) {
+    padding: 10px 10px;
+    border-bottom: 4px solid transparent;
+}
+
+.nav__item:nth-child(1):hover,
+.nav__item:nth-child(2):hover,
+.nav__item:nth-child(3):hover,
+.nav__item:nth-child(4):hover,
+.nav__item:nth-child(5):hover {
+    border-bottom: 4px solid #000;
+}
+
+.nav__item:nth-child(4),
+.nav__item:nth-child(5) {
+    font-size: 14px;
+}
+
+.nav__item:nth-child(7) i,
+.nav__item:nth-child(9) i {
+    font-size: 20px;
+}
+
+.nav__item:nth-child(7),
+.nav__item:nth-child(8),
+.nav__item:nth-child(9) {
+    padding: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav__item:nth-child(7):hover,
+.nav__item:nth-child(8):hover,
+.nav__item:nth-child(9):hover {
+    border-bottom: 2px solid #000;
+}
+
+/* 
+    VEHICLES
+ */
+
+.vehicles__div,
+.shop__div {
+    position: relative;
+    width: calc(100% - 21.5%);
+    height: 300px;
+    background: #f1f1f1;
+    position: fixed;
+    top: -100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.3s;
+    padding: 0px 8%;
+    padding-top: 8%;
+    opacity: 0;
+}
+.vehicles__div > i,
+.shop__div > i {
+    position: absolute;
+    top: 170px;
+    right: 30px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.vehicle__container {
+    width: 100%;
+    height: 100%;
+}
+.vehicles__nav {
+    width: 100%;
+    height: 120px;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vehicles__nav > h1 {
+    font-weight: 100;
+    letter-spacing: 0.06em;
+}
+.vehicles__nav > div {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.vehicles__nav > div h3 {
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.vehicles__nav > div h3:hover {
+    text-decoration: underline;
+}
+.vehicles__nav > div h3 > i {
+    font-size: 14px;
+}
+.vehicles__nav > div > button {
+    padding: 16px 40px;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+.vehicles__nav > div > button:hover {
+    opacity: 0.8;
+}
+.vehicles__nav > div > button > i {
+    margin-left: 10px;
+}
+
+.vehicles__banner {
+    padding-top: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.vehicles__sidebar {
+    width: 20%;
+    height: 30%;
+    display: flex;
+}
+.vehicles__sidebar ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    font-weight: 900;
+}
+.vehicles__sidebar ul li {
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.vehicles__sidebar ul li:hover {
+    text-decoration: underline;
+}
+.vehicles__image {
+    width: 78%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.vehicles__card {
+    max-width: 33%;
+    height: 250px;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+    border-bottom: 2px solid transparent;
+}
+.vehicles__card > img {
+    width: 100%;
+}
+.vehicles__card:hover {
+    background: #fff;
+    border-bottom: 4px solid crimson;
+}
+.vehicles__card h2 {
+    font-size: 16px;
+}
+.vehicles__card p {
+    font-size: 14px;
+    font-weight: 100;
+    margin-top: 5px;
+}
+
+/* 
+    SHOP
+ */
+
+.shop__nav {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+}
+
+.shop__nav > h1 {
+    font-weight: 100;
+    letter-spacing: 0.06;
+}
+.shop__nav > button {
+    width: 250px;
+    height: 50px;
+    background: crimson;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+.shop__nav > button:hover {
+    background: #a40125;
+}
+
+.shop__banner {
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+.shop__left {
+    width: 40%;
+    height: 70%;
+    display: flex;
+    padding-top: 30px;
+}
+.shop__left ul {
+    width: 90%;
+    list-style: none;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+.shop__left ul li {
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.shop__left ul li:hover {
+    text-decoration: underline;
+}
+
+.shop__left ul li:nth-child(1),
+.shop__left ul li:nth-child(2) {
+    width: 80%;
+    height: 75px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.shop__left ul li:nth-child(1):hover,
+.shop__left ul li:nth-child(2):hover {
+    background: crimson;
+    color: #fff;
+}
+
+.shop__left ul li:nth-child(1) i,
+.shop__left ul li:nth-child(2) i {
+    font-size: 20px;
+}
+
+.shop__right {
+    width: 60%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+.shop__right > div img {
+    width: 100%;
+}
+.shop__right > div {
+    width: 32%;
+    height: 280px;
+}
+.shop__right > div > h3 {
+    margin-bottom: 10px;
+}
+.shop__right > div > p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #363636;
+}
+.shop__line {
+    width: 100%;
+    height: 1px;
+    background: #555;
+}
+.shop__right > button {
+    width: 40%;
+    height: 50px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+.shop__right > button:hover {
+    opacity: 0.8;
+}
+/* 
+    SEARCH
+ */
+
+.search {
+    position: relative;
+    width: calc(100% - 21.5%);
+    height: 250px;
+    background: #f1f1f1;
+    position: fixed;
+    top: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.3s;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.search > div:nth-child(2) {
+    margin-bottom: 40px;
+    display: flex;
+}
+.search > div:nth-child(2) input {
+    width: 550px;
+    text-indent: 20px;
+    height: 50px;
+    border: none;
+    border-radius: 4px 0px 0px 4px;
+    margin-right: 2px;
+}
+.search > div:nth-child(2) button {
+    padding: 0px 25px;
+    border: none;
+    background: #fff;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+}
+.search > i {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.search__border {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    left: 0;
+    border-bottom: 1px solid #ddd;
+}
+.search__show {
+    top: 0px;
+    height: 250px;
+    background: #f1f1f1;
+}
+.show {
+    top: 0px;
+    height: 100vh;
+    opacity: 1;
+}
+.icon {
+    transform: rotate(180deg);
+}
+
+.banner {
+    width: 100%;
+    min-height: 700px;
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10%;
+    padding-top: 30px;
+}
+.banner ul {
+    width: 100%;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+    margin-top: 40px;
+}
+.banner ul li {
+    padding: 0px 20px;
+    padding-bottom: 15px;
+    border-bottom: 5px solid transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.banner ul li:first-child {
+    border-bottom: 5px solid #000;
+}
+.banner ul li:hover {
+    border-bottom: 5px solid #000;
+}
+.banner__container {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.banner__card {
+    max-width: 23%;
+    height: 250px;
+    transition: 0.3s;
+    background: transparent;
+    cursor: pointer;
+    border-bottom: 5px solid transparent;
+}
+.banner__card > img {
+    width: 100%;
+}
+.banner__card:hover {
+    border-bottom: 5px solid crimson;
+    background: #fff;
+}
+.banner__card h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.banner__card p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* 
+    ICONS
+ */
+.icons {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.icons > div {
+    width: 300px;
+    height: 100px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.icons > div:hover {
+    border: 1px solid transparent;
+    background: crimson;
+    color: #fff;
+}
+.icons > div > i {
+    font-size: 30px;
+}
+
+/* 
+    ELECTRIFY
+ */
+
+.electrify {
+    width: 100%;
+    height: 700px;
+    background: url(./images/img6.jpg) no-repeat center/cover;
+    padding: 0px 10%;
+    padding-top: 10%;
+}
+.electrify > h1 {
+    font-size: 45px;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 0.05em;
+}
+.electrify > p {
+    color: #fff;
+    margin: 30px 0px;
+}
+.electrify > button {
+    border: none;
+    background: crimson;
+    color: #fff;
+    width: 220px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.electrify > button:hover {
+    background: #a40125;
+}
+
+/* 
+    SECOND BANNER
+ */
+.second__banner {
+    width: 100%;
+    min-height: 700px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.nd__card {
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.nd__card > h3 {
+    font-weight: 400;
+    margin-left: 10px;
+}
+.nd__card > p {
+    font-weight: 100;
+    font-size: 14px;
+    color: #555;
+    margin-left: 10px;
+}
+.nd__card > button {
+    width: 180px;
+    height: 60px;
+    border: 1px solid #000;
+    margin-left: 10px;
+    font-size: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+    background: transparent;
+}
+.nd__card > button:hover {
+    background: #000;
+    color: #fff;
+}
+.nd__img {
+    width: 400px;
+    height: 65%;
+    background: url(./images/img3.jpg) no-repeat center/cover;
+    display: flex;
+    align-items: flex-end;
+}
+.nd__img > h4 {
+    color: #fff;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.snow {
+    background: url(./images/img5.jpg) no-repeat center/cover;
+}
+.house {
+    background: url(./images/img7.jpg) no-repeat center/cover;
+}
+
+/* 
+    NISSAN HOME
+ */
+.nissan__home {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#f1f1f1, #fff);
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 0px 8%;
+    padding-top: 10%;
+}
+.nissan__card {
+    margin: auto;
+    width: 560px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.nissan__card > h1 {
+    width: 70%;
+    font-weight: 300;
+}
+.nissan__card > p {
+    font-size: 14px;
+    color: #555;
+}
+.nissan__card:first-child > button {
+    background: #000;
+    color: #fff;
+}
+.nissan__card:first-child > button:hover {
+    opacity: 0.8;
+}
+.nissan__card > button {
+    width: 40%;
+    height: 50px;
+    border: 1px solid #000;
+    cursor: pointer;
+    background: transparent;
+    transition: 0.3s;
+}
+.nissan__card > button:hover {
+    background: #000;
+    color: #fff;
+}
+.nissan__card:nth-child(2) {
+    background: url(./images/img17.jpg) no-repeat center/cover;
+}
+
+.nissan__card__img {
+    width: 100%;
+    height: 320px;
+    background: url(./images/img18.jpg) no-repeat center/cover;
+}
+.nissan__card:nth-child(4) > .nissan__card__img {
+    width: 100%;
+    height: 320px;
+    background: url(./images/img8.jpg) no-repeat center/cover;
+}
+.nissan__card:nth-child(4) > h4,
+.nissan__card:nth-child(3) > h4 {
+    margin-top: 15px;
+    font-size: 15px;
+}
+.nissan__card:nth-child(4) > h2,
+.nissan__card:nth-child(3) > h2 {
+    margin: 10px 0;
+    font-weight: 400;
+    font-size: 20px;
+}
+.nissan__card:nth-child(4) > p,
+.nissan__card:nth-child(3) > p {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: #555;
+}
+
+.nissan__discover {
+    width: 100%;
+    min-height: 600px;
+    padding-top: 2%;
+}
+.nissan__discover > h1 {
+    font-weight: 300;
+    letter-spacing: 0.05;
+}
+.nissan__line {
+    width: 100%;
+    height: 4px;
+    background: #000;
+    margin: 30px 0;
+}
+.discover__con {
+    width: 100%;
+    min-height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+.discover__card {
+    width: 390px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+}
+.discover__card > h3 {
+    font-weight: 600;
+    font-size: 16px;
+}
+.discover__card > h4 {
+    width: 60%;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 18px;
+}
+.discover__card > button {
+    width: 160px;
+    border: 1px solid #000;
+    background: transparent;
+    height: 60px;
+    transition: 0.3s;
+    font-size: 15px;
+    cursor: pointer;
+}
+.discover__card > p {
+    font-size: 14px;
+    color: #555;
+}
+.discover__card > button:hover {
+    background: #000;
+    color: #fff;
+}
+.discover__card__img {
+    width: 100%;
+    height: 220px;
+    background: url(./images/img19.jpg) no-repeat center/cover;
+}
+.discover__card:nth-child(2) .discover__card__img {
+    background: url(./images/img4.jpg);
+}
+.discover__card:nth-child(3) .discover__card__img {
+    background: url(./images/img1.jpg);
+}
+
+/* 
+    FOOTER
+ */
+.footer {
+    margin-top: 20px;
+    width: 100%;
+    height: 400px;
+    background: dodgerblue;
+}
+.footer__title {
+    width: 100%;
+    height: 250px;
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.footer__title h1 {
+    font-weight: 300;
+    letter-spacing: 0.05;
+}
+.footer__title button {
+    width: 300px;
+    height: 50px;
+    border: none;
+    color: #fff;
+    background: crimson;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.footer__title button:hover {
+    background: #a40125;
+}
+.footer__link {
+    width: 100%;
+    min-height: 100%;
+    background: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0px 10%;
+    padding-top: 20px;
+    gap: 20px;
+}
+.footer__link ul {
+    list-style: none;
+    color: #fff;
+    font-weight: 600;
+}
+.footer__link ul li {
+    font-weight: 100;
+    font-size: 14px;
+    color: #ddd;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.footer__link ul li:hover {
+    text-decoration: underline;
+}
+
+.footer__bottom {
+    width: 100%;
+    height: 80px;
+    background: #000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.footer__bottom ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+    font-size: 12px;
+    color: #919191;
+}
+.footer__bottom ul li {
+    cursor: pointer;
+}
+.footer__bottom ul li button {
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    color: #919191;
+    background: transparent;
+    cursor: pointer;
+}
+.footer__bottom ul li:hover {
+    text-decoration: underline;
+}
+.footer__line {
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+}
